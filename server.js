@@ -8,7 +8,7 @@ import authRoutes from "./routes/auth.route.js"
 dotenv.config()
 const app=express()
 const PORT = process.env.PORT || 5000
-app.use(cors())
+app.use(cors({origin :"https://deva-auth.netlify.app",credentials:true}))
 axios.defaults.withCredentials = true
 
 app.use(express.json())
